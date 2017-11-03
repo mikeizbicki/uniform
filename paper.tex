@@ -68,6 +68,12 @@
 \newcommand{\loss}{\ell}
 \newcommand{\reg}{r}
 
+\newcommand{\+}{\oplus}
+\newcommand{\meet}{\wedge}
+\newcommand{\join}{\vee}
+\newcommand{\dist}{d}
+\newcommand{\breg}{D}
+
 %\newcommand{\plots}[1]{}
 \newcommand{\plots}[1]{#1}
 \newcommand{\ignore}[1]{}
@@ -76,6 +82,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{filecontents}{paper.bib}
+
+@article{harremoes2007information,
+  title={Information topologies with applications},
+  author={Harremo{\"e}s, Peter},
+  journal={Entropy, Search, Complexity},
+  volume={16},
+  pages={113--150},
+  publisher={Springer}
+}
 
 \end{filecontents}
 \immediate\write18{bibtex paper}
@@ -91,6 +106,42 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{definition}
+    A \defn{lattice semigroup} is a set $L$ together with binary operations $\+,\meet,\join : L\times L\to L.$
+\end{definition}
+
+\begin{definition}
+    A \defn{uniform space} is a set $X$ together with an associated lattice semigroup $L$ and a distance function $\dist : X\times X\to L$.
+\end{definition}
+
+\begin{example}
+    Every metric space is a uniform space where the underlying lattice semigroup is the real number line $\R$.
+\end{example}
+
+\begin{example}
+    Let $f : \R^d \to \R$ be a convex function.
+    The \defn{Bregman divergence} $\breg_f : \R^d\times\R^d\to\R$ is defined to be
+    \begin{equation}
+        \breg_f(x,y) = f(x)-f(y) - \trans{(x-y)}\grad f(x)
+        .
+    \end{equation}
+    In general, the Bregman divergence is not symmetric and does not satisfy the triangle inequality.
+    We can, however, construct a uniform space for each Bregman divergence.
+
+    Construct the Bregman lattice $L_f$ as follows.
+\end{example}
+
+\begin{example}
+    Let $(X_1,\dist_1)$ and $(X_2,\dist_2)$ be two uniform spaces.
+    Then the product uniform space is defined to be
+\end{example}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{References}
+
+\citet{harremoes2007information} introduces the ``strong information topology'' induced by the KL divergence.
+Do all divergences induce a topology?
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
