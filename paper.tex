@@ -33,6 +33,7 @@
 \newtheorem{lemma}{Lemma}
 
 \theoremstyle{definition}
+\newtheorem{remark}{Remark}
 \newtheorem{definition}{Definition}
 \newtheorem{example}{Example}
 %\newcommand{\defn}[1]{\emph{#1}}
@@ -83,6 +84,17 @@
 
 \begin{filecontents}{paper.bib}
 
+@article{george1994some,
+  title={On some results in fuzzy metric spaces},
+  author={George, A and Veeramani, P},
+  journal={Fuzzy sets and systems},
+  volume={64},
+  number={3},
+  pages={395--399},
+  year={1994},
+  publisher={Elsevier}
+}
+
 @article{harremoes2007information,
   title={Information topologies with applications},
   author={Harremo{\"e}s, Peter},
@@ -90,6 +102,72 @@
   volume={16},
   pages={113--150},
   publisher={Springer}
+}
+
+@article{huang2007cone,
+  title={Cone metric spaces and fixed point theorems of contractive mappings},
+  author={Huang, Long-Guang and Zhang, Xian},
+  journal={Journal of mathematical Analysis and Applications},
+  volume={332},
+  number={2},
+  pages={1468--1476},
+  year={2007},
+  publisher={Elsevier}
+}
+
+@article{azam2011common,
+  title={Common fixed point theorems in complex valued metric spaces},
+  author={Azam, Akbar and Fisher, Brian and Khan, M},
+  journal={Numerical Functional Analysis and Optimization},
+  volume={32},
+  number={3},
+  pages={243--253},
+  year={2011},
+  publisher={Taylor \& Francis}
+}
+
+@article{jankovic2011cone,
+  title={On cone metric spaces: a survey},
+  author={Jankovi{\'c}, Slobodanka and Kadelburg, Zoran and Radenovi{\'c}, Stojan},
+  journal={Nonlinear Analysis: Theory, Methods \& Applications},
+  volume={74},
+  number={7},
+  pages={2591--2601},
+  year={2011},
+  publisher={Elsevier}
+}
+
+@Article{pajoohesh2013kmetric,
+author="Pajoohesh, H.",
+title="k-metric spaces",
+journal="Algebra universalis",
+year="2013",
+month="Feb",
+day="01",
+volume="69",
+number="1",
+pages="27--43",
+abstract="In this paper, we give a new generalization of metric spaces called k-metric spaces. Our k-metrics are valued in lattice ordered groups, which allows us to talk about distance in non-abelian lattice ordered groups. We also discuss a class of (not necessarily abelian) lattice ordered groups in which every k-metric induces a topology. Then we show that every k-metric valued in the real numbers is metrizable. In the last section, we characterize intrinsic metrics on lattice ordered rings that are almost f-rings and prove that being an almost f-ring is necessary and sufficient for this characterization. Then we show that if a lattice ordered ring is representable, then every intrinsic metric is a k-metric.",
+issn="1420-8911",
+doi="10.1007/s00012-012-0218-8",
+url="https://doi.org/10.1007/s00012-012-0218-8"
+}
+
+@article{shukla2014partial,
+  title={Partial rectangular metric spaces and fixed point theorems},
+  author={Shukla, Satish},
+  journal={The Scientific World Journal},
+  volume={2014},
+  year={2014},
+  publisher={Hindawi Publishing Corporation}
+}
+
+@article{paul2016extensions,
+  title={Extensions of some fixed point results in fuzzy 2-metric spaces},
+  author={Paul, Sudipta and Chetia, Sanchita},
+  journal={International Journal of Engineering Science},
+  volume={2917},
+  year={2016}
 }
 
 \end{filecontents}
@@ -105,6 +183,10 @@
 \maketitle
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 
 \begin{definition}
     A \defn{lattice semigroup} is a set $L$ together with binary operations $\+,\meet,\join : L\times L\to L.$
@@ -135,6 +217,27 @@
     Let $(X_1,\dist_1)$ and $(X_2,\dist_2)$ be two uniform spaces.
     Then the product uniform space is defined to be
 \end{example}
+
+\begin{example}
+    \citet{huang2007cone} introduces cone metric spaces.
+    These seem to be the most general analogue of what I'm looking for.
+    They restrict the lattice to sit within a Banach space.
+    \citet{jankovic2011cone} provide a more updated survey of cone metrics.
+    (It's really good!)
+    Cone metrics were apparently previously called $K$-metrics.
+    \citet{pajoohesh2013kmetric} contains some results on $k$-metrics, 
+    but I'm not convinced they're entirely equivalent.
+
+    \citet{azam2011common} introduce complex valued metric spaces and study fixed point theorems.
+    \citet{paul2016extensions} studies 2-metrics in fuzzy metric spaces, and has lots of references.
+    \citet{george1994some} more fuzzy metric spaces.
+\end{example}
+
+\begin{remark}
+    Other generalizations of metric spaces include:
+    partial metric spaces (where the self distance on a point need not be zero)
+    and rectangular metric spaces (where the triangle inequality is 4-way) \citep{shukla2014partial}.
+\end{remark}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
